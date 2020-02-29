@@ -1,0 +1,290 @@
+* {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;	/*mozilla firefox old version*/
+	-webkit-box-sizing: border-box;	/*chrome old version*/
+}
+html {
+	scroll-behavior: smooth;
+	/*height: 100%;*/
+}
+body {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 17px;	/* now 17px = 1em */
+	color: #555555;
+	background-color: #f1f2f3;
+	margin: 0;	/*remove default, default browser set it to 8px*/
+	/*height: 100%;*/
+}
+
+/* navbar */
+nav {
+	background: rgba(0, 0, 0, 0.3);
+	position: fixed;
+	width: 100%;	/* 100vw will cause horizontal crollbar,
+	because vertical scrollbar are included in vw units. */
+	visibility: hidden;		/* to hide navbar when load page  */
+}
+nav ul {
+	list-style-type: none;
+	margin: 0;	/*remove default ul margin*/
+	padding: 0 100px;
+
+}
+nav ul li {
+	float: right;
+}
+nav ul li a {
+	display: block;
+	margin: 15px 20px;
+	color: #ffffff;
+	text-decoration: none;
+}
+@keyframes increase {
+	from { width: 0%; }
+	to { width: 40%; }
+}
+nav ul li a:hover {
+	box-shadow: 0 2px 0 #ffffff;
+	animation-name: increase;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	/*border-bottom: 2px solid #ffffff;*/
+}
+
+/* landing-page */
+#landing-page {
+	background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+		url('./../img/wallpaper.jpg');  /* trick */
+	background-size: cover;
+	background-attachment: fixed;
+	height: 100vh;
+	position: relative;		/* relative above absolute */
+}
+#landing-page .text {
+	color: #ffffff;
+	font-family: 'Julius Sans One', sans-serif;
+	width: 100vw;
+	max-width: 100%;
+	margin-top: 10%;
+	display: block;
+	position: absolute;
+	text-align: center;
+}
+#landing-page h1 {
+	font-size: 2.5em;
+	margin-top: 1.5em;
+	margin-bottom: 0;
+}
+#landing-page h3 {
+	/*animation-duration: 2s;
+	animation-name: slideInRight;*/
+	font-size: 1.5em;
+	margin-bottom: 35px;
+}
+#landing-page a {
+	font-family: 'Source Sans Pro', sans-serif;
+	color: #ffffff;
+	text-decoration: none;
+	padding: 10px 20px;
+	border-radius: 30px;
+	background: rgba(0, 0, 0, 0.5);
+}
+#landing-page a:hover {
+	border-radius: 40px;
+	background: rgba(0, 0, 0, 0.7);
+}
+.about {
+	height: 440px;
+	margin: 30px auto;
+}
+.title {
+	font-size: 30px;
+	padding: 15px;
+	text-align: center;
+	background-color: #ffffff;
+}
+.card {
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	transition: 0.3s;
+	border-radius: 5px; /* 5px rounded corners */
+	background-color: #f6f7f8;
+}
+.avatar img {
+	border-radius: 5px 5px 0 0;
+	width: 100%;
+  }
+/**/
+.avatar {
+	width: 26%;
+	height: 100%;
+	float: left;
+	margin-left: 5%;
+}
+.avatar h4 {
+	text-align: center;
+	margin: 10px 0;
+}
+.avatar p {
+	text-align: center;
+	margin: 0 0 20px 0;
+	height: 30px;
+	color: #ffffff;
+	background-color: #00AB6B;
+	padding-top: 3px;
+}
+/**/
+.infomation {
+	width: 61%;
+	height: 100%;	/*440px*/
+	float: right;
+	margin-right: 5%;
+}
+.infomation p {
+	margin: 7px 100px;
+	font-size: 20px;
+}
+.infomation p:first-child {
+	margin-top: 50px;
+}
+/**/
+.github {
+	margin-top: 50px;
+}
+.infomation img {
+	margin-left: 100px;
+	width: 30px;
+	height: 30px;
+	border-radius: 5px 5px;
+	/*margin-bottom: -5px;*/	/*change position have same affect*/
+}
+.infomation a:nth-child(2) {
+	font-size: 17px;
+	margin-left: 20px;
+	text-decoration: none;
+	color: #3B5998;
+	position: absolute;
+	margin-top: 5px;
+}
+.mail, .facebook {
+	margin-top: 20px;
+}
+/**/
+.skills {
+	/*margin: 30px 30px 30px 30px;*/
+	margin: 30px 0 30px 0;
+	height: 630px;
+}
+.skills .card {
+	background-color: #ffffff;
+	border-radius: 0;
+}
+.skills h3 {
+	text-align: center;
+}
+.skills h4 {
+	margin: 0 10px;
+	display: inline-block;
+}
+.skills img {
+	display: inline-block;
+	margin-left: 10%;
+}
+.skills p {
+	margin-left: 10%;
+	margin-right: 10%;
+}
+.line-1 {
+	height: 300px;
+	margin-bottom: 2%;
+}
+.programming {
+	/*display: inline-block;
+	width: 40%;
+	height: 300px;*/
+	float: left;
+	width: 44%;
+	height: 300px;
+	margin-left: 5%;
+	border-left: 5px solid #F35022;
+}
+.ide-apps {
+	/*display: inline-block;
+	width: 40%;
+	height: 300px;*/
+	float: right;
+	width: 39%;
+	height: 300px;
+	margin-right: 10%;
+	border-left: 5px solid #80BB03;
+}
+.ide-apps .logo img:first-child {
+	margin-left: 15%;
+}
+.research {
+	/*display: inline-block;
+	width: 30%;
+	height: 300px;*/
+	float: left;
+	width: 39%;
+	height: 300px;
+	margin-left: 10%;
+	border-left: 5px solid #03A5F0;
+}
+.working {
+	/*display: inline-block;
+	width: 30%;
+	height: 300px;*/
+	float: right;
+	width: 44%;
+	height: 300px;
+	margin-right: 5%;
+	border-left: 5px solid #FFB903;
+}
+.preloading {
+	margin: 0;
+	height: 100%;
+	overflow: hidden;
+}
+.loader {
+	width: 100vw;
+	height: 100vh;
+	max-width: 100%;
+	background-color: #ffffff;
+	display: block;
+	font-size: 0;
+}
+.animation {
+	padding-top: 20%; /*20% of width*/
+	width: 270px;
+	margin: 0 auto;
+}
+.dot {
+	width: 30px;
+	height: 30px;
+	border-radius: 100%;
+	display: inline-block;
+	padding: 0;
+	margin: 0 auto;
+	animation-name: zoomIn;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-fill-mode: backwards;
+}
+.blue {
+	background-color: #4285F4;
+}
+.red {
+	background-color: #EA4335;
+	margin-left: 50px;
+	animation-delay: 0.3s;
+}
+.yellow {
+	background-color: #FBBC05;
+	margin-left: 50px;
+	animation-delay: 0.6s;
+}
+.green {
+	background-color: #34A853;
+	margin-left: 50px;
+	animation-delay: 0.9s;
+}
